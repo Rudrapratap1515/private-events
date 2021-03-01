@@ -1,0 +1,24 @@
+<%= form_with model: @user , :class => "form" do |form| %>
+    <div style="padding: 3%">
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name , :placeholder => 'Enter the Name' %>
+        </div><br/>
+
+        <div>
+            <%= form.label :address %>
+            <%= form.text_field :address , :placeholder => 'Enter the Address' %>
+        </div><br/>
+
+        <div>
+            <%= form.label :phone %>
+            <%= form.number_field :phone , :placeholder => 'Enter the Phone' %>
+        </div><br/>
+        
+        <div>
+            <%= form.label :age %>
+            <%= form.number_field :age , :placeholder => 'Enter the Age' %>
+        </div><br/>
+        <%= form.submit %>
+    </div>
+<% end %>
