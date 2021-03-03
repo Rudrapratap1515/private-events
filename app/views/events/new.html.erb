@@ -1,0 +1,28 @@
+<%= form_with model: @event , :class => "form" do |form| %>
+    <div style="padding: 3%">
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name , :placeholder => 'Enter the Name' %>
+        </div><br/>
+
+        <div>
+            <%= form.label :location %>
+            <%= form.text_field :location , :placeholder => 'Enter the Location' %>
+        </div><br/>
+
+        <div>
+            <%= form.label :about %>
+            <%= form.text_area :about , :placeholder => 'Enter the Description' %>
+        </div><br/>
+        
+        <div>
+            <%= form.label :date %>
+            <%= form.date_field :date , :placeholder => 'Enter the Age' %>
+        </div><br/>
+        
+        <div>
+            <%= form.hidden_field :user_id , value: session[:current_user][:id] %>
+        </div>
+        <%= form.submit %>
+    </div>
+<% end %>

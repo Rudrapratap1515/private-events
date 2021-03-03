@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <span style="float:right"><%= link_to 'Logout' , logout_path %></span>
+    <% end %>
     <%= yield %>
   </body>
 </html>

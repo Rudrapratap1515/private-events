@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<%= form_with url: sessions_path, local: true do |f| %>
+    <div style="padding: 3%">
+        <div>
+            <%= f.label :name %>
+            <%= f.text_field :name , :placeholder => 'Enter Name of Creator' %>
+        </div><br/>
+        <div>
+            <%= f.submit "Login" %>
+        </div><br/>
+    </div>
+<% end %>
